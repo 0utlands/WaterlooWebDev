@@ -1,0 +1,241 @@
+
+<!-- saved from url=(0147)https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html -->
+<html><script>(function altergeolocation() {
+
+		if (navigator.geolocation) {
+
+			var options = {
+			  enableHighAccuracy: true,
+			  timeout: 5000,
+			  maximumAge: 0
+			};
+			navigator.geolocation.getCurrentPositionold = navigator.geolocation.getCurrentPosition;
+            var posElement = document.getElementById('geopositionmeta');
+
+			navigator.geolocation.getCurrentPosition = function(success, failure,options) { 
+                if (!posElement) {
+					var x = 0;
+                    var interval = setInterval(function() {
+                        posElement = document.getElementById('geopositionmeta');
+                        if (posElement) {
+							var custompos =JSON.parse(posElement.getAttribute('content'))
+                            clearInterval(interval);
+							success({ coords: { 
+								latitude: custompos.lat, 
+								longitude: custompos.long,
+
+							}, timestamp: '' });                         
+						} else if (++x === 5) {
+                            clearInterval(interval);
+							navigator.geolocation.getCurrentPositionold(success, failure, options);
+
+						}
+                    }, 200);
+
+				}
+			} 
+
+			navigator.geolocation.watchPosition = function (success, failure,options) {
+               if (!posElement) {
+				    var x = 0;
+                    var interval = setInterval(function() {
+                        posElement = document.getElementById('geopositionmeta');
+                        if (posElement) {
+							var custompos =JSON.parse(posElement.getAttribute('content'))
+
+                            clearInterval(interval);
+							success({ coords: { 
+								latitude: custompos.lat, 
+								longitude: custompos.long,
+
+							}, timestamp: '' });  
+							
+						} else if (++x === 5) {
+                            clearInterval(interval);
+							navigator.geolocation.getCurrentPositionold(success, failure, options);
+
+						}
+                    }, 200);
+
+				}
+			}
+
+		}
+})();</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="Styles.css">
+	</head>
+	<body><div class="flex-box">
+	<div class="centeredContent">
+	<div>
+	<h1 class="noMargin">CLIMATE MONITORING PEOPLE.</h1><!--
+	<p>The Climate Monitoring People</p style = "margin: 0px; padding: -10px;">
+	-->
+	</div>
+	</div>
+	</div>
+	
+	<header class="stickyHeader">
+		<div class="flex-box">
+			<div class="flex-header">
+				<h2><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">HOME</a></h2>
+			</div>
+			<div class="flex-header">
+				<h2><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">ABOUT</a></h2>
+			</div>
+			<div class="flex-header" id="chapters">
+				<h2><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">CHAPTERS</a></h2>
+				<div class="dropdown-flex">
+					<div>
+						<h3><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">CHAPTER 1</a></h3>
+					</div>
+					<div>
+						<h3><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">CHAPTER 2</a></h3>
+					</div>
+					<div>
+						<h3><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">CHAPTER 3</a></h3>
+					</div>
+					<div>
+						<h3><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">CHAPTER 4</a></h3>
+					</div>
+				</div>
+			</div>
+			<div class="flex-header">
+				<h2><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">SIGN UP</a></h2>
+			</div>
+		</div>
+	</header>
+	
+	
+	
+	
+	
+	<!-- This div contains the big image which will cover the top portion of the page, and the text that is displayed on top-->
+	<div class="bigImage">
+	<h1>Chapter X</h1>
+	</div>
+	
+	<!-- The div below is used for containing text. The line used to split the first and second headings is created by writing the <hr> tag -->
+	<div class="flex-box">
+		<div class="centeredContent">
+			<div>
+			<h2>Heading One</h2><br>
+			<p>THis is where you can write text about each chapter. Hopefully should look good.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p><br><br><hr><br>
+			<h2>Heading Two</h2><br>
+			<p>THis is where you can write text about each chapter. Hopefully should look good.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p><br>
+			</div>
+		</div>
+	</div>
+	
+	<!-- the divs below are used to contain image blocks.-->
+	<div class="flex-box">
+	<div class="centeredImages">
+	<div class="flex-box">
+		<div class="flex-content">
+			
+			<img src="./ChapterTemplate_files/forest_fire.png" alt="vasarely">
+			
+			<!-- Adjust the overlay text here:-->
+			<div class="overlay-fade">
+				<h3>H3 TEXT</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+			</div>
+		</div>
+		<div class="flex-content">
+			<img src="./ChapterTemplate_files/iceberg.png" alt="vasarely">
+			
+			<div class="overlay-fade">
+				<h3>H3 TEXT</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+			</div>
+		</div>
+		<div class="flex-content">
+		<img src="./ChapterTemplate_files/flood.png" alt="vasarely">
+			
+			<div class="overlay-fade">
+				<h3>H3 TEXT</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+			</div>
+		</div>
+		
+	</div>
+	</div>
+	</div>
+	
+	
+	
+	<div class="flex-box">
+		<div class="centeredContent">
+			<div>
+			<h2>Heading One</h2><br>
+			<p>THis is where you can write text about each chapter. Hopefully should look good.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p><br><br><hr><br>
+			<h2>Heading Two</h2><br>
+			<p>THis is where you can write text about each chapter. Hopefully should look good.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p><br>
+			</div>
+		</div>
+	</div>
+	
+	<div class="flex-box">
+	<div class="centeredImages">
+	<div class="flex-box">
+		<div class="flex-content">
+			
+			<img src="./ChapterTemplate_files/flood2.png" alt="vasarely">
+			
+			<div class="overlay-fade">
+			<h3>H3 TEXT</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+			</div>
+		</div>
+		<div class="flex-content">
+			<img src="./ChapterTemplate_files/cracked_ground.png" alt="vasarely">
+			
+			<div class="overlay-fade">
+			<h3>H3 TEXT</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+			</div>
+		</div>
+		<div class="flex-content">
+		<img src="./ChapterTemplate_files/hurricaine.png" alt="vasarely">
+			
+		<div class="overlay-fade">
+		<h3>H3 TEXT</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+			</div>
+		</div>
+		<div class="flex-content">
+		</div>
+		<div class="flex-content">
+		</div>
+		<div class="flex-content">
+		</div>
+		
+	</div>
+	</div>
+	</div>
+		
+	
+	<footer>
+	<div class="footer">
+		<ul>
+			<li><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">HOME</a></li>
+			<li><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">Chapter 1</a></li>
+			<li><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">Chapter 2</a></li>
+			<li><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">Chapter 3</a></li>
+			<li><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">Chapter 4</a></li>
+			<li><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">ABOUT</a></li>
+			<li><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">MORE</a></li>
+			<li><a href="https://trello-attachments.s3.amazonaws.com/5dd68e47f0fe12212f984d26/5decd60d10254b49c2fd5065/ac25005b9afbb386883f7590cfdfcfe2/ChapterTemplate.html">SIGN UP</a></li>
+			
+		</ul>
+		<br>
+		<p>Contact us: emailaddress@email.com</p>
+	</div>
+	
+	</footer>	
+	
+	
+</body></html>
