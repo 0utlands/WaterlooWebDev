@@ -84,20 +84,6 @@ p {
 	transition: .25s ease;
 }
 
-h2 {
-	font-weight: bold;
-	font-size: 30px;
-	text-align: center;
-	font-family: 'Archivo Black', sans-serif;
-	color: black;
-	padding: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 0px;
-	margin-top: 5px;
-	transition: .25s ease;
-};
-
 .flex-header:hover h2{
 	
 	padding-left: 20px;
@@ -110,21 +96,19 @@ h2 {
 	*/
 }
 
-/*
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(1deg); }
-  20% { transform: translate(-3px, 0px) rotate(-1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(-1deg); }
-  50% { transform: translate(-1px, 2px) rotate(1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(1deg); }
-  80% { transform: translate(-1px, -1px) rotate(-1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(1deg); }
+h2 {
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Archivo Black', sans-serif;
+	color: black;
+	padding: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+	transition: .25s ease;
 }
-*/
 
 
 .bigImage {
@@ -138,6 +122,19 @@ h2 {
 	padding-top:30px;
 }
 
+.bigImage2 {
+	background-image: url("deforestation.jpg");
+	height: 30%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align:center;
+	margin-bottom: 50px;
+	padding-top:30px;
+}
+
+
+
 .bigImage h1 {
 	
 	color: white;
@@ -147,6 +144,15 @@ h2 {
 	transition: 1s ease;
 	overflow: none;
 	font-size: 7vw;
+	
+	
+}
+
+.bigImage2 h1 {
+	
+	color: white;
+	overflow: none;
+	font-size: 5vw;
 	
 	
 }
@@ -370,4 +376,103 @@ h2 {
 
 .centeredImages div {
 	text-align:center;
+}
+
+table.enquiries {
+	
+	border-collapse: collapse;
+}
+
+table.enquiries td.question {
+	padding: 15px 10px;
+	font-family: 'Crimson Text', serif;
+	text-align:right;
+	font-size: 20px;
+	width: 10vw;
+	/*
+	border: 1px solid green;
+	*/
+}
+
+table.enquiries td.input {
+	padding: 15px 10px;
+	font-family: 'Crimson Text', serif;
+	text-align:left;
+	font-size: 20px;
+	width: 30vw;
+	/*
+	border: 1px solid green;
+	*/
+}
+
+table.enquiries {
+	
+	border-collapse: collapse;
+}
+
+table.enquiries td.question {
+	padding: 15px 10px;
+	font-family: 'Crimson Text', serif;
+	text-align:right;
+	font-size: 20px;
+	width: 10vw;
+	/*
+	border: 1px solid green;
+	*/
+}
+
+table.enquiries td.input {
+	padding: 15px 10px;
+	font-family: 'Crimson Text', serif;
+	text-align:left;
+	font-size: 20px;
+	width: 30vw;
+	/*
+	border: 1px solid green;
+	*/
+}
+
+input[type=text]{
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid grey;
+	-webkit-transition: 0.5s;
+	outline:none;
+	width:100%;
+	
+}
+
+input[type=text]:focus{
+	border: 2px solid rgb(255,192,0);
+	box-shadow: 3px 3px 4px lightgrey;
+}
+
+input[type=email]{
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid grey;
+	-webkit-transition: 0.5s;
+	outline:none;
+	width:100%;
+}
+
+input[type=email]:focus{
+	border: 2px solid rgb(255,192,0);
+	box-shadow: 3px 3px 4px lightgrey;
+	
+}
+
+input[type=date]{
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid grey;
+	-webkit-transition: 0.5s;
+	outline:none;
+	width:100%
+}
+
+input[type=date]:focus{
+	border: 2px solid rgb(255,192,0);
+	box-shadow: 3px 3px 4px lightgrey;
+	
 }
