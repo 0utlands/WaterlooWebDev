@@ -1,0 +1,190 @@
+body {
+	background-color: rgb(153, 204, 255);
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+
+	
+}
+
+h2 {
+	font-family: 'Marck Script', cursive;
+	font-size: 2.5rem;
+}
+
+footer {
+	border-top: 2px black solid;
+	background-color: grey;
+	position: relative;
+	color: white;
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+	height: 100px;
+	
+}
+
+nav a{
+	text-decoration: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: white;
+}
+
+nav {
+	
+	width: 100%;
+	position: relative;
+	left: 0;
+	text-align: center;
+	top: 0;
+	background-color: rgba(0, 4, 82);
+	
+}
+
+nav a:hover {
+	background-color: white;
+	color: rgb(0, 4 , 82);
+}
+
+button {
+	margin-bottom: 20px;
+}
+
+button a{
+	text-decoration: none;
+	color: black;
+	
+}
+
+table {
+	border: 1px black solid;
+	text-align: center;
+	width: 100%;
+}
+
+th{
+	border: 1px black solid;
+
+}
+
+ul a{
+	text-decoration: none;
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	
+}
+
+ul a:hover{
+	text-decoration: underline;
+}
+
+li {
+	list-style: none;
+	display: inline;
+}
+
+
+img {
+	max-width: 90%;
+	height: auto;
+	border: 3px black solid;
+	border-radius: 15px;
+	
+}
+
+input {
+	
+	width: 25%;
+	
+}
+
+form{
+	padding-bottom: 20px;
+
+}
+
+.InputMarginTop {
+	margin-top: 20px;
+}
+
+
+.noBorder{
+	border: 0;
+}
+
+.maincontent {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+	
+}
+
+#middle {
+	font-size: 30px;
+}
+
+#ReservationHeading {
+	margin-top: 20px;
+}
+
+#ScrollTop{
+	position: fixed;
+	right:0;
+	bottom: 20px;
+	z-index: 99;
+	
+}
+
+#scrollButton {
+  display: none;
+  position: fixed;
+  bottom: 20px; 
+  right: 10px;
+  z-index: 10;
+  border: none;
+  border-radius: 10px;
+  background-color: navy;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+
+
+}
+
+#scrollButton:hover {
+  background-color: white;
+  color: rgb(0, 4 , 82);
+}
+
+#ReservationButton {
+	background-color: navy;
+	color: white;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+#ReservationButton:hover{
+	background-color: white;
+	color: navy;
+}
+
+#CarouselImageContainer {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	border: solid black 1px;
+	min-height: 600px;
+	background-size: cover;
+	width: 95%;
+	margin-right: auto;
+	margin-left: auto;
+
+	
+	
+}
+
+
