@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css" >
+<link href="https://fonts.googleapis.com/css?family=Marck+Script&display=swap" rel="stylesheet">
+<title>Reservations</title>
+
+</head>
+<body>
+
+<nav>
+<a href="Leisure.html" >Leisure travel  </a>
+<a href="AboutUs.html">About us        </a>
+<a id="middle" href="index.html">The Loch Inn    </a>
+<a href="Corporate.html">Corporate travel</a>
+<a href="Reservations.html">Reservations    </a>
+
+</nav>
+
+
+<div class="maincontent">
+
+<h2 id="ReservationHeading" >Reservations</h2>
+
+<p>Welcome to our reservation page for The Loch Inn, Inverness. Please see our price list below (prices shown are per room per night, with dining included), and once you are ready to make a reservation, fill out the form on the page with your details. (Peak times are from June to August, and all rooms are doubles)</p>
+
+<table>
+<tr>
+	<th></th>
+	<th>Leisure</th>
+	<th>Corporate</th>
+	<th>Leisure Plus</th>
+	<th>Corporate Plus</th>
+</tr>
+
+<tr>
+	<th>Off-peak</th>
+	<th>£85</th>
+	<th>£95</th>
+	<th>£100</th>
+	<th>£115</th>
+</tr>
+
+<tr>
+	<th>Peak</th>
+	<th>£100</th>
+	<th>£120</th>
+	<th>£115</th>
+	<th>£130</th>
+</tr>
+
+
+
+</table>
+
+
+
+<form action="http://localhost:8000/process_get" method="GET">
+<h2>Booking form</h2>
+<input type="text" name="first_name" placeholder="First name">
+<input type="text" name="last_name" placeholder="Last name">
+<input type="email" name="email" placeholder="Email" required>
+<input type="submit" class="InputMarginTop">
+</form>
+
+</div>
+
+<button onclick="ScrollTop()" id="scrollButton">Back to top</button>
+
+<footer>
+<ul>
+<a href="index.html">Homepage</a>
+<a href="Leisure.html">Non-corporate travel</a>
+<a href="AboutUs.html">About our business</a>
+<a href="Corporate.html">Corporate travel</a>
+<a id="noBorder" href="Reservations.html">Reservations</a>
+</ul>
+<p>Copyright © 2019 Matthew McElwain. All rights reserved.</p>
+</footer>
+
+<script>
+button = document.getElementById("scrollButton");
+
+
+window.onscroll = function() {ShowButtonOrNot()};
+
+function ShowButtonOrNot() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    button.style.display = "block";
+  } 
+  
+  else {
+    button.style.display = "none";
+  }
+}
+
+
+function ScrollTop() {
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+
+</body>
+</html>
