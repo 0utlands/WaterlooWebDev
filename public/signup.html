@@ -47,7 +47,7 @@
 	<div class = "flex-box">
 		<div class = "sheet"> 
 		
-			<form>
+			<form action="http://localhost:8000/process_get" method="GET">
 			
 			
 			
@@ -74,7 +74,7 @@
 					<label for = "firstName">First Name:</label>
 				</td> 
 				<td class = "input">
-					<input type = "text" required = "true" id = "firstName">
+					<input type = "text" required = "true" name="first_name" id = "firstName">
 				</td>
 			</tr>
 			
@@ -83,7 +83,7 @@
 					<label for = "surname">Surname:</label>
 				</td> 
 				<td class = "input">
-					<input type = "text" required = "true" id = "surname">
+					<input type = "text" required = "true" name="last_name" id = "surname">
 				</td>
 			</tr>
 			
@@ -92,13 +92,22 @@
 					<label for = "email">Email:</label>
 				</td> 
 				<td class = "input">
-					<input type = "email" required = "true" id = "email" placeholder = "e.g. yourname@example.com">
+					<input type = "email" required = "true" name="email" id = "email" placeholder = "e.g. yourname@example.com">
+				</td>
+			</tr>
+			
+<tr>
+				<td class = "question">
+					
+				</td> 
+				<td class = "input">
+					<input type = "submit">
 				</td>
 			</tr>
 			
 			</table>
 			
-			
+			</form>
 			
 		
 		</div>
