@@ -59,7 +59,7 @@ app.get('/process_get', function (req, res) {
 			
 		}
 	});
-	res.send("data sent successfully");
+	res.sendFile("public/thankyou.html", { root: __dirname });
 	})
    
    
