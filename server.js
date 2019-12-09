@@ -47,8 +47,8 @@ app.get('/process_get', function (req, res) { //this is the function that reads 
 	var emailDestination = {
 		from: 'webdevemailtest1@gmail',
 		to: req.query.email,
-		subject: 'Thank you for signing up ' + req.query.first_name + "!",
-		text: 'Yea so thanks boomer'
+		subject: 'Thank you!',
+		text: req.query.first_name + ', thank you so much for signing up to our email list. Now you will be the first to find out about new climate change developments!'
 	};
 	
 	emailAccount.sendMail(emailDestination, function (error, info){
