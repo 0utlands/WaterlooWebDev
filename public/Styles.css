@@ -524,3 +524,8 @@ input[type=date]:focus{
 	margin-right: 5px;
 	
 }
+
+#chapterHR {
+	padding-top: 50px;
+	padding-bottom: 50px;	
+}
