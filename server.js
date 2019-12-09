@@ -69,7 +69,7 @@ app.get('/process_get', function (req, res) { //this is the function that reads 
   
 
 
-var server = app.listen(8000, function () { //setup the server
+var server = app.listen(3000, function () { //setup the server
    var host = server.address().address
    var port = server.address().port
    
