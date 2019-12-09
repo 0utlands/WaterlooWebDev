@@ -490,6 +490,38 @@ input[type=date]:focus{
 	
 }
 
+input[type=comments]{
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid grey;
+	-webkit-transition: 0.5s;
+	outline:none;
+	width:100%;
+}
+
+input[type=comments]:focus{
+	border: 2px solid rgb(255,192,0);
+	box-shadow: 3px 3px 4px lightgrey;
+	height:10vh;
+	
+}
+
+input[type=submit]{
+    font-family:arial;
+    font-size:20px;
+    padding:10px;
+    border-radius: 5px;
+    margin:10px;
+    border:2px solid green;
+    color: green;
+    -webkit-transition: 0.5s;
+    background-color:#78ffb2;
+}
+
+input[type=submit]:hover{
+    color:white;
+    background-color:green;
+}
 /* NEW STUFF */
 
 #thankYou {

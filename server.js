@@ -28,7 +28,8 @@ app.get('/process_get', function (req, res) { //this is the function that reads 
    data = {
       first_name:req.query.first_name,
       last_name:req.query.last_name,
-	  email:req.query.email
+	  email:req.query.email,
+	  comments:reg.query.comments
    };
    
 
