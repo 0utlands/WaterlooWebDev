@@ -542,3 +542,6 @@ input[type=date]:focus{
 	margin:20px;
 	width: 350px;
 }
+html, body {
+    height: 100%
+}
