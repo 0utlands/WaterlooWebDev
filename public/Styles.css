@@ -529,3 +529,8 @@ input[type=date]:focus{
 	margin-top: 50px;
 	margin-bottom: 50px;	
 }
+
+.aboutDiv {
+	padding:20px;
+	margin:20px;
+}
