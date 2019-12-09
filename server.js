@@ -2,12 +2,14 @@ var express = require('express');
 var app = express();
 var fs = require("fs");
 var nodemailer = require("nodemailer");
+//these are the modules that are needed for the code to work
 
 
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED='0';
+//this turns off SSL certificate checking, as we dont have a SSL certificate
 
-var emailAccount = nodemailer.createTransport({
+var emailAccount = nodemailer.createTransport({ //this sets up the email account to send an email from
 	service: 'gmail',
 	auth: {
 		user: 'webdevemailtest1@gmail.com',
@@ -18,7 +20,7 @@ var emailAccount = nodemailer.createTransport({
 
 app.use(express.static('public'));//specifies where the static files are
 
-app.get('/process_get', function (req, res) {
+app.get('/process_get', function (req, res) { //this is the function that reads the form data, stores it, sends the email and returns a repsomnse to the user
 	
 	
 	
@@ -66,7 +68,7 @@ app.get('/process_get', function (req, res) {
   
 
 
-var server = app.listen(8000, function () {
+var server = app.listen(8000, function () { //setup the server
    var host = server.address().address
    var port = server.address().port
    
