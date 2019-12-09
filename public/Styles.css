@@ -69,6 +69,11 @@ p {
 	font-size:20px;
 }
 
+li {
+	font-family: arial;
+	font-size:19px;
+}
+
 .flex-header h2{
 	font-weight: bold;
 	font-size: 30px;
